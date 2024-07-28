@@ -48,12 +48,12 @@ const year = date.getFullYear();
       <div className="container-fluid padding-size">
       <div className="navbar justify-content-around   boreder-1">
         <ul className='nav-ul d-flex'>
-          <li className="a"><a href="">أخبار عامة</a></li>
-          <li className="a"><a href="">العالم</a></li>
-          <li className="a"><a href="">التقنية</a></li>
-          <li className="a"><a href="">الترفيه</a></li>
-          <li className="a"><a href="">العلوم</a></li>
-          <li className="a"><a href="">الصحة</a></li>
+          <li className="a"><a href="#general">أخبار عامة</a></li>
+          <li className="a"><a href="#sport">الرياضة</a></li>
+          <li className="a"><a href="#tech">التقنية</a></li>
+          <li className="a"><a href="#bus">الأعمال</a></li>
+          <li className="a"><a href="#sci">العلوم</a></li>
+          <li className="a"><a href="#hea">الصحة</a></li>
         </ul>
       </div>
       </div>

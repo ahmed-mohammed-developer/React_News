@@ -31,7 +31,7 @@ const Maintop = () => {
 
 
   return (
-    <div className='Maintop'>
+    <div className='Maintop' id='general'>
       {headline && (
          <div className="container-fluid padding-size">
          <div className="row">
