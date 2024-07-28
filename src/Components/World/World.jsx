@@ -4,6 +4,8 @@ import img1 from '../../assets/img/img-1.jpg'
 
 
 const World = () => {
+
+  
   return (
     <div className='Word'>
       <div className="container-fluid padding-size">
