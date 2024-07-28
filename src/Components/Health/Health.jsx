@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import img1 from '../../assets/img/img-1.jpg'
 import axios from 'axios'
 
 
