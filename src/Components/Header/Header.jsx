@@ -1,6 +1,5 @@
 import React from 'react'
 import './Header.css'
-import img1 from '../../assets/img/img-1.jpg'
 
 const Header = () => {
   // إنشاء كائن Date للتاريخ الحالي
@@ -58,18 +57,6 @@ const year = date.getFullYear();
         </ul>
       </div>
       </div>
-      <div className="container-fluid padding-size">
-        <div className="row">
-          <div className="col-lg-8 col-md-12">
-            <div className="main-title">
-              <img src={img1} alt="" />
-              <h1>أكبر حريق غابات بكاليفورنيا.. دمار عشرات المنازل وأوامر إجلاء بـ4 مقاطعات</h1>
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-12">aaaaaaaaa</div>
-        </div>
-      </div>
-      
     </div>
   )
 }
