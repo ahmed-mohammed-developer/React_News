@@ -13,3 +13,6 @@ html {
 body {
   font-family: "Noto Naskh Arabic", serif;
 }
+a {
+  text-decoration: none !important;
+}

@@ -13,7 +13,7 @@ const Technology = () => {
     const response = await axios.get(url);
     const fetchedNews = response.data.articles;
     
-    setNews(fetchedNews.slice(2, 6))
+    setNews(fetchedNews.slice(4, 8))
     }
     fetchNews()
   }, [])
@@ -30,7 +30,9 @@ const Technology = () => {
         <div className="row">
         {news.map((article, index) => (
             <div key={index} className="col-md-3 col-sm-6 techddes">
-                <img src={article.image} alt={article.title} />
+              <a href={article.url}>
+              <img src={article.image} alt={article.title} />
+              </a>
                 <h2>{article.title}</h2>
             </div>
               ))}

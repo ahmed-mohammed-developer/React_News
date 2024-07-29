@@ -9,8 +9,6 @@ const Maintop = () => {
     const [headline, setHeadline] = useState(null);
     const [news, setNews] = useState([]);
     
-
-
     useEffect(() => {
       const fetchNews = async () => {
       const url = `https://gnews.io/api/v4/top-headlines?category=general&lang=ar&apikey=71c6e5f5aecc125b3a617f2c9a3f6b38`;
@@ -23,27 +21,28 @@ const Maintop = () => {
         }
       })
 
-      setHeadline(fetchedNews[0]);
-      setNews(fetchedNews.slice(1, 5))
+      setHeadline(fetchedNews[2]);
+      setNews(fetchedNews.slice(3, 7))
       }
       fetchNews()
     }, [])
-
-
   return (
     <div className='Maintop' id='general'>
       {headline && (
          <div className="container-fluid padding-size">
          <div className="row">
            <div className="col-lg-7 col-md-12">
+             <a href={headline.url}>
              <div className="main-title">
                <img src={headline.image  || noImg} alt={headline.title} />
                <h1>{headline.title}</h1>
              </div>
+             </a>
            </div>
            <div className="col-lg-4 col-sm-12">
            {news.map((article, index) => (
-               <div key={index} className="row marginTopBo">
+             <a href={article.url}>
+                <div key={index} className="row marginTopBo">
                <div className="col-lg-4 col-md-5 col-sm-6 leftSection">
                <img src={article.image || noImg} alt={article.title} />
                </div>
@@ -51,6 +50,7 @@ const Maintop = () => {
                <h2>{article.title}</h2>
                </div>
              </div>
+             </a>
            ))}
            </div>
          </div>
@@ -60,5 +60,6 @@ const Maintop = () => {
   </div>
   )
 }
+
 
 export default Maintop

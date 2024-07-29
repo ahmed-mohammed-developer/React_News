@@ -29,7 +29,9 @@ const Health = () => {
         <div className="row">
         {news.map((article, index) => (
             <div key={index} className="col-md-3 col-sm-6 worddes">
-                <img src={article.image} alt={article.title} />
+              <a href={article.url}>
+              <img src={article.image} alt={article.title} />
+              </a>
                 <h2>{article.title}</h2>
             </div>
              ))}

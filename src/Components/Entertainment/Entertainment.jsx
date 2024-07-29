@@ -12,7 +12,7 @@ const Entertainment = () => {
     const response = await axios.get(url);
     const fetchedNews = response.data.articles;
     
-    setNews(fetchedNews.slice(1, 5))
+    setNews(fetchedNews.slice(6, 10))
     }
     fetchNews()
   }, [])
@@ -25,14 +25,17 @@ const Entertainment = () => {
         <i className='bx bx-chevron-left'></i>
         </div>
       </div>
+      
       <div className="container-fluid padding-sizq">
         <div className="row">
         {news.map((article, index) => (
             <div key={index} className="col-md-3 col-sm-6 worddes">
-                <img src={article.image} alt={article.title} />
-                <h2>{article.title}</h2>
+              <a href={article.url}>
+              <img src={article.image} alt={article.title} />
+              </a>
+              <h2>{article.title}</h2>
             </div>
-             ))}
+          ))}
         </div>
       </div>
     </div>
